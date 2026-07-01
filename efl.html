@@ -1,0 +1,433 @@
+
+
+Efl digital solutions · HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Efl Digital Solutions — Transforming Data into Insights</title>
+<link rel="icon" type="image/png" href="../EFL/Images/high-resolution-logo-grayscale.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Lora:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="efl.css">
+</head>
+<body>
+ 
+<!-- NAV -->
+<nav>
+  <div class="container nav-inner">
+    <a href="#top" class="logo-link" aria-label="Efl Digital Solutions — home">
+      <img src="data:image/png;base64,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" alt="Efl Digital Solutions" class="logo-mark">
+      <div class="display" style="font-weight:700;font-size:16.5px;">Efl Digital Solutions</div>
+    </a>
+    <div class="nav-links" style="display:flex;gap:34px;align-items:center;">
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#work">Industries</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn-primary" style="padding:11px 20px;">Start a project</a>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#services">Services</a>
+    <a href="#process">Process</a>
+    <a href="#work">Industries</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Start a project</a>
+  </div>
+</nav>
+<div id="top"></div>
+ 
+<!-- HERO -->
+<header style="position:relative;padding:168px 0 110px;overflow:hidden;">
+  <div class="grain" style="position:absolute;inset:0;pointer-events:none;"></div>
+  <!-- geometry -->
+  <div class="hero-shape float" style="top:110px;right:6%;filter:drop-shadow(0 30px 40px rgba(22,23,26,0.22));">
+    <img src="data:image/png;base64,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" alt="" style="width:220px;height:auto;display:block;">
+  </div>
+  <div class="hero-shape float-slow" style="top:280px;right:20%;width:110px;height:110px;background:var(--amber);clip-path:polygon(0 22px,22px 0,100% 0,100% calc(100% - 22px),calc(100% - 22px) 100%,0 100%);"></div>
+  <div class="hero-shape spin-slow" style="top:60px;right:2%;width:340px;height:340px;border:1px solid var(--line);border-radius:50%;"></div>
+  <div class="hero-shape" style="top:420px;right:12%;width:64px;height:64px;background:var(--paper-dim);border:1px solid var(--line);clip-path:polygon(0 12px,12px 0,100% 0,100% calc(100% - 12px),calc(100% - 12px) 100%,0 100%);"></div>
+ 
+  <div class="container" style="position:relative;">
+    <div style="max-width:640px;">
+      <div class="eyebrow reveal in" style="font-size:16px;margin-bottom:22px;">Transforming Data into Insights</div>
+      <h1 class="display" style="font-size:clamp(40px,5.4vw,64px);line-height:1.06;font-weight:700;margin:0 0 26px;letter-spacing:-.01em;">
+        We build the software your growth is waiting on.
+      </h1>
+      <p style="font-size:18px;line-height:1.65;color:var(--charcoal);max-width:520px;margin:0 0 40px;">
+        Efl Digital Solutions is a USA-based team of senior engineers turning
+        operational data into working systems — custom software, AI, and cloud
+        architecture built by people who've shipped it before.
+      </p>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;">
+        <a href="#contact" class="btn btn-primary">Start a project →</a>
+        <a href="#work" class="btn btn-ghost">See our work</a>
+      </div>
+      <div style="display:flex;gap:36px;margin-top:64px;flex-wrap:wrap;">
+        <div><div class="display" style="font-size:26px;font-weight:700;">40+</div><div style="font-size:13.5px;color:var(--charcoal);">projects delivered</div></div>
+        <div><div class="display" style="font-size:26px;font-weight:700;">98%</div><div style="font-size:13.5px;color:var(--charcoal);">client satisfaction</div></div>
+        <div><div class="display" style="font-size:26px;font-weight:700;">60+</div><div style="font-size:13.5px;color:var(--charcoal);">years combined experience</div></div>
+      </div>
+    </div>
+  </div>
+</header>
+ 
+<!-- LOGO MARQUEE -->
+<section style="border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:26px 0;overflow:hidden;background:#fff;">
+  <div class="marquee-track">
+    <!-- repeated twice for seamless loop -->
+    <span class="serif-italic" style="font-size:17px;color:var(--charcoal);">Startups</span>
+    <span class="serif-italic" style="font-size:17px;color:var(--charcoal);">Healthcare</span>
+    <span class="serif-italic" style="font-size:17px;color:var(--charcoal);">Finance</span>
+    <span class="serif-italic" style="font-size:17px;color:var(--charcoal);">Logistics</span>
+    <span class="serif-italic" style="font-size:17px;color:var(--charcoal);">Retail</span>
+    <span class="serif-italic" style="font-size:17px;color:var(--charcoal);">Manufacturing</span>
+    <span class="serif-italic" style="font-size:17px;color:var(--charcoal);">SaaS</span>
+    <span class="serif-italic" style="font-size:17px;color:var(--charcoal);">Education</span>
+    <span class="serif-italic" style="font-size:17px;color:var(--charcoal);">Startups</span>
+    <span class="serif-italic" style="font-size:17px;color:var(--charcoal);">Healthcare</span>
+    <span class="serif-italic" style="font-size:17px;color:var(--charcoal);">Finance</span>
+    <span class="serif-italic" style="font-size:17px;color:var(--charcoal);">Logistics</span>
+    <span class="serif-italic" style="font-size:17px;color:var(--charcoal);">Retail</span>
+    <span class="serif-italic" style="font-size:17px;color:var(--charcoal);">Manufacturing</span>
+    <span class="serif-italic" style="font-size:17px;color:var(--charcoal);">SaaS</span>
+    <span class="serif-italic" style="font-size:17px;color:var(--charcoal);">Education</span>
+  </div>
+</section>
+ 
+<!-- SERVICES -->
+<section id="services" style="padding:130px 0;">
+  <div class="container">
+    <div class="reveal" style="max-width:560px;margin-bottom:64px;">
+      <div class="eyebrow" style="font-size:15px;margin-bottom:14px;">What we do</div>
+      <h2 class="display" style="font-size:clamp(30px,4vw,42px);font-weight:700;margin:0;letter-spacing:-.01em;">Nine disciplines. One team, end to end.</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);">
+      <!-- service cards generated inline -->
+      <div class="card reveal" data-svc="01" data-t="Custom Software" data-d="Bespoke platforms built around how your business actually operates, not the other way around."></div>
+      <div class="card reveal" data-svc="02" data-t="AI Solutions" data-d="Practical machine learning and LLM integrations that solve a specific business problem, deployed responsibly."></div>
+      <div class="card reveal" data-svc="03" data-t="Data & BI" data-d="Pipelines, warehousing, and dashboards that turn scattered data into decisions your team can act on."></div>
+      <div class="card reveal" data-svc="04" data-t="Automation" data-d="We remove the manual steps between your systems so your team spends time on judgment, not data entry."></div>
+      <div class="card reveal" data-svc="05" data-t="Cloud Architecture" data-d="Secure, scalable infrastructure on AWS or Azure, sized correctly from day one and built to grow."></div>
+      <div class="card reveal" data-svc="06" data-t="API Development" data-d="Well-documented, versioned APIs that make your platform easy to extend and safe to integrate with."></div>
+      <div class="card reveal" data-svc="07" data-t="SaaS Development" data-d="Multi-tenant products built for billing, onboarding, and scale from the first line of code."></div>
+      <div class="card reveal" data-svc="08" data-t="Mobile Apps" data-d="Native-feeling iOS and Android apps sharing a single, well-tested codebase wherever it makes sense."></div>
+      <div class="card reveal" data-svc="09" data-t="System Integration" data-d="We connect the tools you already rely on so information moves without someone copying and pasting it."></div>
+    </div>
+  </div>
+</section>
+ 
+<!-- WHY US -->
+<section style="background:var(--ink);color:#fff;padding:130px 0;position:relative;overflow:hidden;">
+  <div class="hero-shape float-slow" style="bottom:-60px;left:-60px;width:260px;height:260px;background:var(--charcoal);clip-path:polygon(0 50px,50px 0,100% 0,100% calc(100% - 50px),calc(100% - 50px) 100%,0 100%);"></div>
+  <div class="container" style="position:relative;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start;">
+      <div class="reveal">
+        <div class="eyebrow" style="font-size:15px;margin-bottom:14px;color:var(--amber);">Why teams choose us</div>
+        <h2 class="display" style="font-size:clamp(28px,3.6vw,38px);font-weight:700;line-height:1.15;margin:0 0 20px;">Senior engineers.<br>No hand-offs. No surprises.</h2>
+        <p style="color:#C7C6C2;line-height:1.7;font-size:16px;max-width:420px;">Every project is staffed by engineers who are also company shareholders — the people building your software have a direct stake in it working.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,0.12);">
+        <div class="reveal" style="padding:26px 22px;background:var(--ink);"><div style="font-size:22px;margin-bottom:10px;">🇺🇸</div><div class="display" style="font-weight:600;font-size:15.5px;margin-bottom:6px;">USA-based team</div><div style="font-size:13.5px;color:#A9A8A3;line-height:1.5;">Same time zone, direct access, no offshore relay.</div></div>
+        <div class="reveal" style="padding:26px 22px;background:var(--ink);"><div style="font-size:22px;margin-bottom:10px;">🔒</div><div class="display" style="font-weight:600;font-size:15.5px;margin-bottom:6px;">Secure by design</div><div style="font-size:13.5px;color:#A9A8A3;line-height:1.5;">Security reviewed at architecture stage, not bolted on after.</div></div>
+        <div class="reveal" style="padding:26px 22px;background:var(--ink);"><div style="font-size:22px;margin-bottom:10px;">📐</div><div class="display" style="font-weight:600;font-size:15.5px;margin-bottom:6px;">Built to scale</div><div style="font-size:13.5px;color:#A9A8A3;line-height:1.5;">Architecture decisions made for your next stage, not just this one.</div></div>
+        <div class="reveal" style="padding:26px 22px;background:var(--ink);"><div style="font-size:22px;margin-bottom:10px;">🔁</div><div class="display" style="font-weight:600;font-size:15.5px;margin-bottom:6px;">Agile delivery</div><div style="font-size:13.5px;color:#A9A8A3;line-height:1.5;">Working software in your hands every sprint, not just at the end.</div></div>
+        <div class="reveal" style="padding:26px 22px;background:var(--ink);"><div style="font-size:22px;margin-bottom:10px;">🤝</div><div class="display" style="font-weight:600;font-size:15.5px;margin-bottom:6px;">Long-term partner</div><div style="font-size:13.5px;color:#A9A8A3;line-height:1.5;">We stay on after launch — support, iteration, and growth.</div></div>
+        <div class="reveal" style="padding:26px 22px;background:var(--ink);"><div style="font-size:22px;margin-bottom:10px;">✅</div><div class="display" style="font-weight:600;font-size:15.5px;margin-bottom:6px;">Quality assured</div><div style="font-size:13.5px;color:#A9A8A3;line-height:1.5;">Code review, testing, and QA built into every sprint cycle.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- PROCESS -->
+<section id="process" style="padding:130px 0;">
+  <div class="container">
+    <div class="reveal" style="max-width:560px;margin-bottom:70px;">
+      <div class="eyebrow" style="font-size:15px;margin-bottom:14px;">How we work</div>
+      <h2 class="display" style="font-size:clamp(30px,4vw,42px);font-weight:700;margin:0;letter-spacing:-.01em;">A seven-stage process, run the same way every time.</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;">
+      <!-- rows -->
+      <div class="reveal" style="display:grid;grid-template-columns:70px 200px 1fr;gap:24px;padding:26px 0;border-top:1px solid var(--line);align-items:baseline;">
+        <div class="num">01</div><div class="display" style="font-weight:600;font-size:18px;">Discovery</div><div style="color:var(--charcoal);font-size:15px;max-width:520px;">We map your workflows, constraints, and goals before a single design decision is made.</div>
+      </div>
+      <div class="reveal" style="display:grid;grid-template-columns:70px 200px 1fr;gap:24px;padding:26px 0;border-top:1px solid var(--line);align-items:baseline;">
+        <div class="num">02</div><div class="display" style="font-weight:600;font-size:18px;">Planning</div><div style="color:var(--charcoal);font-size:15px;max-width:520px;">Scope, architecture, and milestones are agreed in writing before development starts.</div>
+      </div>
+      <div class="reveal" style="display:grid;grid-template-columns:70px 200px 1fr;gap:24px;padding:26px 0;border-top:1px solid var(--line);align-items:baseline;">
+        <div class="num">03</div><div class="display" style="font-weight:600;font-size:18px;">Design</div><div style="color:var(--charcoal);font-size:15px;max-width:520px;">Interfaces and data models are prototyped and validated with you before we build.</div>
+      </div>
+      <div class="reveal" style="display:grid;grid-template-columns:70px 200px 1fr;gap:24px;padding:26px 0;border-top:1px solid var(--line);align-items:baseline;">
+        <div class="num">04</div><div class="display" style="font-weight:600;font-size:18px;">Development</div><div style="color:var(--charcoal);font-size:15px;max-width:520px;">Built in short sprints with working software delivered for review at every step.</div>
+      </div>
+      <div class="reveal" style="display:grid;grid-template-columns:70px 200px 1fr;gap:24px;padding:26px 0;border-top:1px solid var(--line);align-items:baseline;">
+        <div class="num">05</div><div class="display" style="font-weight:600;font-size:18px;">Testing</div><div style="color:var(--charcoal);font-size:15px;max-width:520px;">Automated and manual QA against real usage patterns, not just the happy path.</div>
+      </div>
+      <div class="reveal" style="display:grid;grid-template-columns:70px 200px 1fr;gap:24px;padding:26px 0;border-top:1px solid var(--line);align-items:baseline;">
+        <div class="num">06</div><div class="display" style="font-weight:600;font-size:18px;">Deployment</div><div style="color:var(--charcoal);font-size:15px;max-width:520px;">A staged rollout with monitoring in place before your users ever see it.</div>
+      </div>
+      <div class="reveal" style="display:grid;grid-template-columns:70px 200px 1fr;gap:24px;padding:26px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);align-items:baseline;">
+        <div class="num">07</div><div class="display" style="font-weight:600;font-size:18px;">Support</div><div style="color:var(--charcoal);font-size:15px;max-width:520px;">We stay on as your system, and your business, keeps evolving after launch.</div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- TECH STACK -->
+<section style="background:var(--paper-dim);padding:110px 0;">
+  <div class="container">
+    <div class="reveal" style="max-width:560px;margin-bottom:56px;">
+      <div class="eyebrow" style="font-size:15px;margin-bottom:14px;">Under the hood</div>
+      <h2 class="display" style="font-size:clamp(30px,4vw,42px);font-weight:700;margin:0;letter-spacing:-.01em;">Technology chosen for the problem, not the resume.</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;">
+      <!-- tech chips -->
+    </div>
+    <div id="techGrid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;"></div>
+  </div>
+</section>
+ 
+<!-- INDUSTRIES -->
+<section id="work" style="padding:130px 0;">
+  <div class="container">
+    <div class="reveal" style="max-width:560px;margin-bottom:56px;">
+      <div class="eyebrow" style="font-size:15px;margin-bottom:14px;">Who we build for</div>
+      <h2 class="display" style="font-size:clamp(30px,4vw,42px);font-weight:700;margin:0;letter-spacing:-.01em;">Industries where the details actually matter.</h2>
+    </div>
+    <div id="indGrid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;"></div>
+  </div>
+</section>
+ 
+<!-- STATS -->
+<section style="background:var(--ink);color:#fff;padding:90px 0;">
+  <div class="container" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:40px;text-align:center;">
+    <div class="reveal"><div class="display counter" data-target="40" style="font-size:44px;font-weight:700;color:var(--amber);">0</div><div style="font-size:14px;color:#B7B6B1;margin-top:8px;">Projects delivered</div></div>
+    <div class="reveal"><div class="display counter" data-target="98" style="font-size:44px;font-weight:700;color:var(--amber);">0</div><div style="font-size:14px;color:#B7B6B1;margin-top:8px;">% client satisfaction</div></div>
+    <div class="reveal"><div class="display counter" data-target="60" style="font-size:44px;font-weight:700;color:var(--amber);">0</div><div style="font-size:14px;color:#B7B6B1;margin-top:8px;">Years combined experience</div></div>
+    <div class="reveal"><div class="display" style="font-size:44px;font-weight:700;color:var(--amber);">24/7</div><div style="font-size:14px;color:#B7B6B1;margin-top:8px;">Support availability</div></div>
+  </div>
+</section>
+ 
+<!-- TESTIMONIALS -->
+<section style="padding:130px 0;">
+  <div class="container">
+    <div class="reveal" style="max-width:560px;margin-bottom:56px;">
+      <div class="eyebrow" style="font-size:15px;margin-bottom:14px;">In their words</div>
+      <h2 class="display" style="font-size:clamp(30px,4vw,42px);font-weight:700;margin:0;letter-spacing:-.01em;">What it's like working with us.</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;">
+      <div class="card reveal chamfer" style="border:1px solid var(--line);">
+        <p class="serif-italic" style="font-size:17px;line-height:1.6;color:var(--charcoal);margin:0 0 24px;">"They rebuilt our inventory system in under three months and it hasn't gone down once since. Communication was direct the entire way."</p>
+        <div style="font-weight:600;font-size:14.5px;">Dana Whitfield</div>
+        <div style="font-size:13px;color:#9C9A92;">COO, Northline Logistics</div>
+      </div>
+      <div class="card reveal chamfer" style="border:1px solid var(--line);">
+        <p class="serif-italic" style="font-size:17px;line-height:1.6;color:var(--charcoal);margin:0 0 24px;">"We came in wanting an app. They came back with a better data model that saved us months of rework down the line."</p>
+        <div style="font-weight:600;font-size:14.5px;">Marcus Ide</div>
+        <div style="font-size:13px;color:#9C9A92;">Founder, Verdant Health</div>
+      </div>
+      <div class="card reveal chamfer" style="border:1px solid var(--line);">
+        <p class="serif-italic" style="font-size:17px;line-height:1.6;color:var(--charcoal);margin:0 0 24px;">"Genuinely senior engineers, not junior devs learning on our budget. That difference showed up in every sprint."</p>
+        <div style="font-weight:600;font-size:14.5px;">Priya Anand</div>
+        <div style="font-size:13px;color:#9C9A92;">VP Engineering, Fieldstone Bank</div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- FAQ -->
+<section id="faq" style="background:var(--paper-dim);padding:120px 0;">
+  <div class="container" style="max-width:820px;">
+    <div class="reveal" style="margin-bottom:40px;">
+      <div class="eyebrow" style="font-size:15px;margin-bottom:14px;">Questions</div>
+      <h2 class="display" style="font-size:clamp(30px,4vw,40px);font-weight:700;margin:0;letter-spacing:-.01em;">Frequently asked.</h2>
+    </div>
+    <div id="faqList"></div>
+  </div>
+</section>
+ 
+<!-- CONTACT -->
+<section id="contact" style="padding:130px 0;">
+  <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:70px;">
+    <div class="reveal">
+      <div class="eyebrow" style="font-size:15px;margin-bottom:14px;">Let's talk</div>
+      <h2 class="display" style="font-size:clamp(28px,3.6vw,38px);font-weight:700;margin:0 0 20px;letter-spacing:-.01em;">Tell us what you're building.</h2>
+      <p style="color:var(--charcoal);line-height:1.7;font-size:16px;max-width:400px;margin:0 0 36px;">We reply within one business day. No sales script — just an engineer who's read your message.</p>
+      <div style="display:flex;flex-direction:column;gap:16px;font-size:15px;">
+        <div><span style="color:#9C9A92;">Email</span><br><strong>hello@efldigital.com</strong></div>
+        <div><span style="color:#9C9A92;">Phone</span><br><strong>+1 (555) 018-2940</strong></div>
+        <div><span style="color:#9C9A92;">LinkedIn</span><br><strong>linkedin.com/company/efl-digital</strong></div>
+      </div>
+    </div>
+    <form class="reveal chamfer" style="background:#fff;border:1px solid var(--line);padding:40px;" onsubmit="event.preventDefault(); this.querySelector('.form-msg').style.display='block';">
+      <div style="display:flex;flex-direction:column;gap:26px;">
+        <input type="text" placeholder="Full name" required>
+        <input type="email" placeholder="Work email" required>
+        <input type="text" placeholder="Company">
+        <textarea rows="4" placeholder="What are you looking to build?" required></textarea>
+        <button type="submit" class="btn btn-primary" style="justify-content:center;">Send message →</button>
+        <div class="form-msg" style="display:none;font-size:13.5px;color:var(--amber-deep);">Thanks — we'll be in touch within one business day.</div>
+      </div>
+    </form>
+  </div>
+</section>
+ 
+<!-- FOOTER -->
+<footer style="background:var(--ink);color:#fff;padding:80px 0 30px;">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:56px;border-bottom:1px solid rgba(255,255,255,0.1);">
+      <div>
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px;">
+          <img src="data:image/png;base64,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" alt="Efl Digital Solutions" style="height:32px;width:auto;filter:invert(1) brightness(1.4);">
+          <div class="display" style="font-weight:700;font-size:16px;">Efl Digital Solutions</div>
+        </div>
+        <p style="color:#A9A8A3;font-size:14px;line-height:1.6;max-width:260px;">Transforming data into insights — custom software, AI, and cloud systems for growing businesses.</p>
+      </div>
+      <div>
+        <div style="font-family:'Space Grotesk';font-weight:600;font-size:14px;margin-bottom:16px;">Company</div>
+        <div style="display:flex;flex-direction:column;gap:10px;font-size:14px;color:#A9A8A3;">
+          <a href="#" style="color:inherit;text-decoration:none;">About</a>
+          <a href="#work" style="color:inherit;text-decoration:none;">Industries</a>
+          <a href="#" style="color:inherit;text-decoration:none;">Careers</a>
+          <a href="#contact" style="color:inherit;text-decoration:none;">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'Space Grotesk';font-weight:600;font-size:14px;margin-bottom:16px;">Services</div>
+        <div style="display:flex;flex-direction:column;gap:10px;font-size:14px;color:#A9A8A3;">
+          <a href="#services" style="color:inherit;text-decoration:none;">Custom Software</a>
+          <a href="#services" style="color:inherit;text-decoration:none;">AI Solutions</a>
+          <a href="#services" style="color:inherit;text-decoration:none;">Cloud Architecture</a>
+          <a href="#services" style="color:inherit;text-decoration:none;">SaaS Development</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'Space Grotesk';font-weight:600;font-size:14px;margin-bottom:16px;">Newsletter</div>
+        <p style="color:#A9A8A3;font-size:13.5px;margin:0 0 14px;">Occasional notes on what we're building.</p>
+        <div style="display:flex;border-bottom:1px solid rgba(255,255,255,0.25);padding-bottom:8px;">
+          <input type="email" placeholder="you@company.com" style="border:none;color:#fff;font-size:13.5px;">
+          <button style="background:none;border:none;color:var(--amber);font-weight:600;cursor:pointer;">→</button>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;padding-top:26px;flex-wrap:wrap;gap:14px;">
+      <div style="font-size:13px;color:#7C7B77;">© 2026 Efl Digital Solutions. All rights reserved.</div>
+      <div style="display:flex;gap:22px;font-size:13px;color:#7C7B77;">
+        <a href="#" style="color:inherit;text-decoration:none;">Privacy</a>
+        <a href="#" style="color:inherit;text-decoration:none;">Terms</a>
+        <a href="#" style="color:inherit;text-decoration:none;">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</footer>
+ 
+<script>
+  // mobile menu toggle
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburgerBtn.addEventListener('click', ()=> mobileMenu.classList.toggle('open'));
+  mobileMenu.querySelectorAll('a').forEach(a=> a.addEventListener('click', ()=> mobileMenu.classList.remove('open')));
+ 
+  // reveal on scroll
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  }, {threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+ 
+  // build service cards content (title/desc from data attrs) with chamfer + number
+  document.querySelectorAll('[data-svc]').forEach(card=>{
+    const n = card.getAttribute('data-svc');
+    const t = card.getAttribute('data-t');
+    const d = card.getAttribute('data-d');
+    card.innerHTML = `<div class="num" style="margin-bottom:20px;">${n}</div>
+      <div class="display" style="font-weight:600;font-size:19px;margin-bottom:10px;">${t}</div>
+      <div style="font-size:14.5px;color:var(--charcoal);line-height:1.6;">${d}</div>`;
+  });
+ 
+  // tech chips
+  const techs = ["React","Next.js","Node.js","TypeScript","Python","PostgreSQL","AWS","Azure","Docker","Kubernetes","OpenAI","LangChain"];
+  const techGrid = document.getElementById('techGrid');
+  techs.forEach(t=>{
+    const d = document.createElement('div');
+    d.className = 'reveal chamfer-sm';
+    d.style.cssText = 'background:#fff;border:1px solid var(--line);padding:20px 16px;text-align:center;font-family:Space Grotesk;font-weight:600;font-size:14px;transition:transform .3s;';
+    d.textContent = t;
+    d.onmouseenter = ()=> d.style.transform='translateY(-4px)';
+    d.onmouseleave = ()=> d.style.transform='translateY(0)';
+    techGrid.appendChild(d);
+  });
+ 
+  // industries
+  const industries = [
+    ["Healthcare","Patient-facing tools and internal systems built for HIPAA-level rigor."],
+    ["Finance","Secure, auditable platforms where every transaction has to be right."],
+    ["Retail","Inventory, commerce, and fulfillment systems that scale with demand."],
+    ["Logistics","Routing and tracking systems that turn movement into visibility."],
+    ["Manufacturing","Production and supply-chain software built around the floor, not the office."],
+    ["Education","Platforms for institutions managing students, staff, and content at scale."],
+    ["Government","Accessible, compliant systems built to public-sector standards."],
+    ["SaaS","Multi-tenant products engineered for billing, security, and scale."],
+    ["Non-profit","Mission-driven organizations get enterprise tooling on realistic budgets."]
+  ];
+  const indGrid = document.getElementById('indGrid');
+  industries.forEach(([t,d])=>{
+    const el = document.createElement('div');
+    el.className='card reveal chamfer';
+    el.style.cssText='border:1px solid var(--line);padding:28px;';
+    el.innerHTML = `<div class="display" style="font-weight:600;font-size:17px;margin-bottom:8px;">${t}</div><div style="font-size:14px;color:var(--charcoal);line-height:1.55;">${d}</div>`;
+    indGrid.appendChild(el);
+  });
+ 
+  // faq
+  const faqs = [
+    ["Do you work with startups or only established companies?","Both. We scope engagements to fit an early-stage budget just as often as we run multi-quarter builds for established teams."],
+    ["How is a project priced?","Fixed-scope for well-defined projects, time-and-materials for ongoing or evolving work. You'll get a clear estimate before anything starts."],
+    ["Who actually writes the code?","Senior engineers, several of whom are shareholders in the company. We don't staff projects with junior developers learning on the job."],
+    ["Do you support the product after launch?","Yes. Most clients move into an ongoing support or retainer arrangement once the initial build ships."],
+    ["What industries have you worked in?","Healthcare, finance, logistics, retail, manufacturing, education, and SaaS, among others — see the Industries section above."]
+  ];
+  const faqList = document.getElementById('faqList');
+  faqs.forEach(([q,a])=>{
+    const item = document.createElement('div');
+    item.className='acc-item';
+    item.innerHTML = `<button class="acc-btn">${q}<span class="acc-plus">+</span></button>
+      <div class="acc-panel"><div style="padding-bottom:24px;font-size:15px;color:var(--charcoal);line-height:1.65;max-width:640px;">${a}</div></div>`;
+    item.querySelector('.acc-btn').onclick = ()=>{
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.acc-item').forEach(i=>i.classList.remove('open'));
+      if(!wasOpen) item.classList.add('open');
+    };
+    faqList.appendChild(item);
+  });
+ 
+  // counters
+  const counters = document.querySelectorAll('.counter');
+  const cIo = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        const el = e.target;
+        const target = parseInt(el.getAttribute('data-target'));
+        let cur = 0;
+        const step = Math.max(1, Math.round(target/40));
+        const t = setInterval(()=>{
+          cur += step;
+          if(cur>=target){ cur=target; clearInterval(t); }
+          el.textContent = cur;
+        }, 30);
+        cIo.unobserve(el);
+      }
+    });
+  }, {threshold:0.5});
+  counters.forEach(c=>cIo.observe(c));
+</script>
+</body>
+</html>
+ 
+
+
