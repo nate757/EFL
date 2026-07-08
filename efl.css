@@ -123,3 +123,64 @@
     .hide-mobile{display:none;}
     .hamburger{display:flex;}
   }
+
+
+  /* Success state */
+
+.form-msg {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    transition: all 0.4s ease;
+}
+
+.form-msg .success-icon {
+    display: block;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 0.4s ease;
+}
+
+.form-msg .success-text {
+    font-size: 15px;
+    line-height: 1.6;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: all 0.4s ease 0.1s;
+}
+
+
+/* Whole form success mode */
+
+.contact-success {
+    background: #f0fdf4 !important;
+    border-color: #22c55e !important;
+    box-shadow: 0 0 25px rgba(34,197,94,0.25);
+}
+
+
+/* Animate the check mark */
+
+.contact-success .success-icon {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/* Animate the message */
+
+.contact-success .success-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+form.reveal.chamfer {
+    transition:
+        background 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
